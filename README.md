@@ -54,7 +54,7 @@ Ingresar en el apartado de "Actions" y debería de aparecer el proceso de despli
 Va a dar un error por que nos va a redireccionar a una página donde no esta desplegado el proyecto
 para solucionar:
 
-Dirijirse a la carpeta [docs] -> index.html y cambiar <base href="/"> por <base href="./">
+Dirijirse a la carpeta [docs] -> index.html y cambiar "< base href="/"> por < base href="./">
 
 Y listo, dirijirse en el apartado de "Actions" e ingresar a la aplicación
 
