@@ -58,3 +58,24 @@ Dirijirse a la carpeta [docs] -> index.html y cambiar "< base href="/"> por < ba
 
 Y listo, dirijirse en el apartado de "Actions" e ingresar a la aplicación
 
+## Desplegar en GitHub (Automatizar - package.json)
+
+Lo primero es instalar una librerias que nos van a permitir manipular carpetas y archivos desde cualquier sistema operativo:
+1. `npm install del-cli --save-dev`
+2. `npm i copyfiles --save-dev`
+3. En el package.json crear el script: "build:href": "ng build --base-href ./",
+
+Después modificar el package.json para que ejectute los comandos como nosotros queremos:
+`  "scripts": {
+    "ng": "ng",
+    "start": "ng serve -o",
+    "build": "ng build",
+    "build:href": "ng build --base-href ./",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "delete:docs": "del docs",
+    "copy:dist":"copyfiles dist/bases/* ./docs -f",
+    "build:github":"npm run delete:docs && npm run build:href && npm run copy:dist "
+  }
+`
+El "build:github" es el script que permite toda la automatización del proceso
