@@ -56,5 +56,5 @@ para solucionar:
 
 Dirijirse a la carpeta [docs] -> index.html y cambiar "< base href="/"> por < base href="./">
 
-Y listo, dirijirse en el apartado de "Actions" e ingresar a la aplicación
+Y listo, dirijirse en el apartado de "Actions" e ingresar a la aplicación, recargar y ya debería de funcionar
 
