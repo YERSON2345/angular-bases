@@ -40,7 +40,7 @@ Abrir una terminal y apuntar a la carpeta de [dist/bases] en este caso bases, pe
 
 Ingresar en Netlify (https://app.netlify.com/teams/yerson2345/sites) y subir la carpeta [dist/bases] la de bases con los archivos que contiene y listo.
 
-## Desplegar en GitHub 
+## Desplegar en GitHub (Manual) 
 
 Ingresar a (github.com) en el repositorio de nuestro proyecto "Settings -> Pages -> Source: Deploy from a branch" (IMPORTANTE: EL REPOSITORIO DEBE SER PUBLICO)
 
