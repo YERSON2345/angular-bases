@@ -26,6 +26,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Desplegar localmente(Solo para dsarrollo)
+## Desplegar
 
-Para desplegar la aplicación localmente utilizando 
+`ng build` o `npm run build` para generar los archivos para subir 
+
+## Desplegar localmente(Solo para desarrollo)
+
+Para desplegar la aplicación localmente utilizando una libreria de npm llamada http-server `npm install --global http-server ` mas información en (https://www.npmjs.com/package/http-server)
+
+Abrir una terminal y apuntar a la carpeta de [dist/bases] en este caso bases, pero puede tener cualquier nombre, una vez dentro utilizar `http-server -o`
+
+## Desplegar en internet de forma rápida
+
+Ingresar en Netlify (https://app.netlify.com/teams/yerson2345/sites) y subir la carpeta [dist/bases] la de bases con los archivos que contiene y listo.
