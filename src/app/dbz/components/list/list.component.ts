@@ -14,18 +14,19 @@ export class ListComponent {
   //Para poner en el *ngFor (characterList)
   public characterList: Character[] = [
     {
-      name:"Trunks",
-      power:10
+      id:"",
+      name:"",
+      power:0
     }
   ]
   //Para mandar información al padre (main-page.component)
   @Output()
-  public onDeleteID: EventEmitter<number> = new EventEmitter();
-  onDeleteCharacter(index:number):void{
+  public onDeleteID: EventEmitter<string> = new EventEmitter();
+  onDeleteCharacter(id:string):void{
     // TODO: Emitir el ID del personaje
-    console.log({index})
+    console.log({id})
 
-    this.onDeleteID.emit(index);
+    this.onDeleteID.emit(id);
 
   }
 
