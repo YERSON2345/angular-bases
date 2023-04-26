@@ -39,3 +39,22 @@ Abrir una terminal y apuntar a la carpeta de [dist/bases] en este caso bases, pe
 ## Desplegar en internet de forma rápida
 
 Ingresar en Netlify (https://app.netlify.com/teams/yerson2345/sites) y subir la carpeta [dist/bases] la de bases con los archivos que contiene y listo.
+
+## Desplegar en GitHub 
+
+Ingresar a (github.com) en el repositorio de nuestro proyecto "Settings -> Pages -> Source: Deploy from a branch" (IMPORTANTE: EL REPOSITORIO DEBE SER PUBLICO)
+
+
+Para crear la carpeta [docs]: ir al IDE y pasar la carpeta bases al root(carpeta raiz del proyecto) y renombrala con el nombre de [docs]
+
+Branch: main -> /docs -> save
+
+Ingresar en el apartado de "Actions" y debería de aparecer el proceso de despliegue en proceso
+
+Va a dar un error por que nos va a redireccionar a una página donde no esta desplegado el proyecto
+para solucionar:
+
+Dirijirse a la carpeta [docs] -> index.html y cambiar <base href="/"> por <base href="./">
+
+Y listo, dirijirse en el apartado de "Actions" e ingresar a la aplicación
+
