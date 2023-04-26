@@ -1,0 +1,27 @@
+<h1>DBZ Personajes</h1>
+<hr>
+<div class="row">
+
+  <div class="col">
+
+
+    <!-- para mandar de padre a hijo se utilizan los [] -->
+    <dbz-list [characterList]="characters"
+              (onDeleteID)="onDeleteCharacter($event)"></dbz-list>
+
+  </div>
+
+  <div class="col">
+
+    <!-- Basicamente, para mandar de hijo a padre debe de ser atrá vez de eventos
+    creamos el metodo para emitir los datos desde el HIJO (add-character.component - emitCharacter()
+    y hacemos refrencia al output (|onNewCharacter|.emit...),
+    en el PADRE (main-page.component) vamos a crear un metodo para imprimir que efectivamente se estan
+    recibiendo los datos ( onNewCharacter(character:Character):void ),
+    y para recibir los datos se debe llamar el metodo para recibir los datos y para recibir los datos utilizamos
+    "$event" para idenficar que se reciban los datos cuadno ocurre un evento, en este caso el submit del formulario (ngSubmit). -->
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<h4>Listado</h4>
+<ul class="list-group">
+
+  <li *ngFor="let character of characterList;
+  let i = index;
+  let isFirst = first;
+  let isLast = last;
+
+  let isEven = even;
+  let isOdd = odd;
+  "
+  class="list-group-item d-flex justify-content-between align-items-center"
+  [ngClass]="{
+    'list-group-item-danger': isLast,
+    'list-group-item-primary': isFirst,
+  }">
+
+  <div>
+    <span class="text-primary">{{ i }}. </span>
+
+    <!-- Sin el 0 -->
+    <!-- <span class="text-primary">{{ i + 1 }}. </span> -->
+    <span>{{ character.name }}</span>
+    <strong> - Power: </strong>
+    <span>{{ character.power }} </span>
+
+    <!-- <br> -->
+
+    <!-- Bueno, un array tiene una lista que empieza en la posicion 0, entonces si el dato de la lista tiene el indenficador en 0 es true y se va a mostrar como el primero de la lista-->
+    <!-- <span>Es el primero: {{ i === 0 }}</span> -->
+    <!-- <span>Es el primero: {{ isFirst }}</span>
+
+    <br> -->
+    <!-- Basicamente el numero de elementos de la lista -1 para descontar el 0 -->
+    <!-- <span>Es el último: {{ i === characterList.length - 1 }} </span> -->
+
+    <!-- <span>Es el último: {{isLast }} </span> -->
+
+    <!-- Bueno, para saber si el INDICE(i) es un numero par -->
+    <!-- <br>
+    <span>Es par: {{ isEven}}</span> -->
+    <!-- Bueno, para saber si el INDICE(i) es un numero impar -->
+
+    <!-- <br>
+    <span>Es impar: {{ isOdd}}</span> -->
+
+  </div>
+  <button class="btn btn-danger"(click)="onDeleteCharacter(i)">X</button>
+</li>
+  <!-- Buscar más sobre ngFor para más condicionales -->
+
+</ul>
